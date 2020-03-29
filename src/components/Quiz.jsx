@@ -54,7 +54,10 @@ function Quiz({
         <button
           className="quiz__button"
           disabled={chosenAnswer === 5}
-          onClick={() => onNext(currentQuestion)}
+          onClick={() => {
+            window.scrollTo(0, 0);
+            onNext(currentQuestion);
+          }}
           type="button"
         >
           Next question
