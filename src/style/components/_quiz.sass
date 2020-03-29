@@ -1,0 +1,77 @@
+.quiz
+  width: 80%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  &__header, &__question
+    background-color: $main-color
+    color: white
+    padding: 20px
+    text-align: center
+    font-size: 1.5rem
+    font-weight: normal
+  &__question
+    margin-bottom: 30px
+  &__answers
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    & > div
+      width: 48%
+      min-height: 100px
+      display: flex
+      background-color: #fff;
+      border: 2px solid $main-color
+      margin-bottom: 30px
+      transition: transform .3s ease
+      cursor: pointer
+    & > div.chosen
+      border-color: $wrong-color
+    & > div.correct
+      border-color: $correct-color
+    & > div.selected
+      transform: scale(1.1)
+  &__option-letter
+    width: 25%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 30px
+    background-color: $main-color
+    color: white
+    &_correct
+      background-color: $correct-color
+    &_chosen
+      background-color: $wrong-color
+  &__answer
+    font-weight: bold
+    width: 75%
+    padding: 20px
+    font-size: 20px
+    display: flex
+    align-items: center
+    &_chosen
+      color: $wrong-color
+    &_correct
+      color: $correct-color
+  &__button
+    border: 2px solid #0b0e21
+    margin: 0 auto
+    display: block
+    border-radius: 0
+    background-color: #0b0e21
+    color: #fff
+    font-size: 18px
+    font-weight: 600
+    padding: 14px 75px
+    text-transform: uppercase
+    transition: color .2s ease, background-color .2s ease
+    margin-bottom: 1.25rem
+    &:hover
+      background-color: #fff
+      color: #0b0e21
+      cursor: pointer
+    &:disabled
+      opacity: 0.3
+
