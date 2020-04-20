@@ -61,7 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
-      title: 'Document',
+      title: 'Quiz',
       mobile: true,
       lang: 'en-US',
       appMountId: 'root',
